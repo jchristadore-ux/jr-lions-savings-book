@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jr Lions Lacrosse — Community Savings Book HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0D1B2A;--navy2:#1A2F45;--navy3:#243B55;--lime:#A3E635;--lime2:#84CC16;--limef:rgba(163,230,53,.12);--white:#FFF;--grey:#8B9BB4;--grey2:#CAD3E0;--card:#152235;--card2:#1C2E42;--border:rgba(163,230,53,.2);--red:#EF4444;--amber:#F59E0B;--green:#22C55E;--text:#D4DDE8}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;line-height:1.5;min-height:100vh}
+.site-header{background:var(--navy2);border-bottom:2px solid var(--lime);padding:0 24px;display:flex;align-items:center;gap:20px;position:sticky;top:0;z-index:100;height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;cursor:pointer}
+.logo-icon{width:36px;height:36px;background:var(--lime);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;color:var(--navy)}
+.logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:var(--white)}
+.logo-text span{color:var(--lime)}
+.nav{display:flex;gap:2px;overflow-x:auto;flex:1}.nav::-webkit-scrollbar{display:none}
+.nav-btn{background:transparent;border:none;color:var(--grey);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;padding:8px 14px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;text-transform:uppercase}
+.nav-btn:hover{color:var(--lime2)}.nav-btn.active{color:var(--lime);border-bottom-color:var(--lime)}
+.header-badge{background:var(--lime);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;padding:4px 10px;border-radius:4px;letter-spacing:.5px;flex-shrink:0}
+.main{max-width:1200px;margin:0 auto;padding:28px 20px}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--white);letter-spacing:.5px;margin-bottom:4px}
+.section-title span{color:var(--lime)}.section-sub{color:var(--grey);font-size:14px;margin-bottom:24px}
+.row{display:grid;gap:16px}.row-2{grid-template-columns:1fr 1fr}.row-3{grid-template-columns:1fr 1fr 1fr}.row-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:768px){.row-2,.row-3,.row-4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--navy3);border-radius:10px;padding:20px}
+.card-lime{border-color:var(--border)}
+.card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:var(--white);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.card-title .dot{width:8px;height:8px;background:var(--lime);border-radius:50%;flex-shrink:0}
+.kpi{background:var(--card2);border:1px solid var(--navy3);border-radius:10px;padding:18px 20px;text-align:center}
+.kpi-label{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.kpi-value{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--lime);line-height:1}
+.kpi-sub{font-size:12px;color:var(--grey);margin-top:4px}
+.callout{border-left:4px solid var(--lime);background:var(--limef);border-radius:0 8px 8px 0;padding:14px 18px;margin:16px 0}
+.callout.amber{border-left-color:var(--amber);background:rgba(245,158,11,.08)}
+.callout.red{border-left-color:var(--red);background:rgba(239,68,68,.08)}
+.callout.green{border-left-color:var(--green);background:rgba(34,197,94,.08)}
+.callout-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--lime);margin-bottom:6px;text-transform:uppercase}
+.callout.amber .callout-title{color:var(--amber)}.callout.red .callout-title{color:var(--red)}.callout.green .callout-title{color:var(--green)}
+.callout p,.callout li{font-size:13px;color:var(--text);line-height:1.6}.callout ul{padding-left:16px;margin-top:4px}
+.tbl-wrap{overflow-x:auto;border-radius:8px;border:1px solid var(--navy3)}
+table{width:100%;border-collapse:collapse}
+thead th{background:var(--navy3);color:var(--grey2);font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 12px;text-align:left;white-space:nowrap}
+tbody tr{border-bottom:1px solid rgba(255,255,255,.04)}tbody tr:last-child{border-bottom:none}tbody tr:hover{background:rgba(163,230,53,.04)}
+tbody td{padding:10px 12px;font-size:13px;color:var(--text);vertical-align:top}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.3px}
+.tg{background:rgba(34,197,94,.15);color:#4ade80}.ts{background:rgba(99,102,241,.2);color:#a5b4fc}
+.tr{background:rgba(245,158,11,.15);color:#fcd34d}.tc{background:rgba(14,165,233,.15);color:#7dd3fc}.tf{background:rgba(236,72,153,.15);color:#f9a8d4}
+.email-block{background:var(--navy);border:1px solid var(--navy3);border-radius:8px;overflow:hidden;margin-bottom:18px}
+.email-header{background:var(--card2);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.email-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--white)}
+.email-subject{font-size:12px;color:var(--lime2);font-style:italic;margin-top:2px}
+.email-meta{display:flex;gap:8px;align-items:center}
+.email-cat{font-size:11px;background:rgba(163,230,53,.1);color:var(--lime);padding:2px 8px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:600}
+.copy-btn{background:var(--lime);color:var(--navy);border:none;padding:6px 14px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;cursor:pointer;transition:background .15s;text-transform:uppercase;letter-spacing:.5px}
+.copy-btn:hover{background:var(--lime2)}.copy-btn.copied{background:var(--green);color:white}
+.email-body{padding:16px;font-size:13px;color:var(--text);white-space:pre-wrap;line-height:1.7;max-height:320px;overflow-y:auto}
+.email-body::-webkit-scrollbar{width:4px}.email-body::-webkit-scrollbar-thumb{background:var(--navy3);border-radius:2px}
+.progress-wrap{background:var(--card);border:1px solid var(--navy3);border-radius:8px;padding:16px 20px;margin-bottom:20px}
+.progress-label{display:flex;justify-content:space-between;margin-bottom:8px}
+.progress-label span{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:var(--grey2)}
+.progress-bar{background:var(--navy3);border-radius:4px;height:10px;overflow:hidden}
+.progress-fill{background:linear-gradient(90deg,var(--lime2),var(--lime));height:100%;border-radius:4px;transition:width .4s ease;width:0%}
+.steps-phase{margin-bottom:24px}
+.phase-header{background:var(--navy3);padding:10px 16px;border-radius:8px 8px 0 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.phase-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:var(--white);text-transform:uppercase;letter-spacing:.5px}
+.phase-dates{font-size:12px;color:var(--lime);font-weight:500}
+.phase-steps{border:1px solid var(--navy3);border-top:none;border-radius:0 0 8px 8px;overflow:hidden}
+.step-item{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;transition:background .1s}
+.step-item:last-child{border-bottom:none}.step-item:hover{background:rgba(163,230,53,.04)}
+.step-check{width:22px;height:22px;border:2px solid var(--grey);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s;margin-top:1px}
+.step-check.done{background:var(--lime);border-color:var(--lime)}.step-check.done::after{content:"✓";color:var(--navy);font-size:13px;font-weight:900}
+.step-text{flex:1}.step-title{font-size:14px;color:var(--white);font-weight:500;line-height:1.4}
+.step-desc{font-size:12px;color:var(--grey);margin-top:2px;line-height:1.4}
+.step-item.done-item .step-title{text-decoration:line-through;opacity:.5}
+.step-priority{font-size:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;padding:2px 7px;border-radius:3px;flex-shrink:0;text-transform:uppercase;letter-spacing:.3px;margin-top:2px}
+.p-high{background:rgba(239,68,68,.2);color:#fca5a5}.p-med{background:rgba(245,158,11,.2);color:#fcd34d}.p-low{background:rgba(163,230,53,.12);color:var(--lime)}
+.verdict-box{background:linear-gradient(135deg,rgba(163,230,53,.06),rgba(163,230,53,.02));border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px;text-align:center}
+.verdict-label{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.verdict-main{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--lime);line-height:1;margin-bottom:8px}
+.verdict-sub{font-size:14px;color:var(--text);line-height:1.5;max-width:600px;margin:0 auto}
+.file-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
+.file-link{background:var(--card2);border:1px solid var(--navy3);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px;text-decoration:none;transition:border-color .15s;cursor:pointer}
+.file-link:hover{border-color:var(--lime)}
+.file-icon{font-size:24px;flex-shrink:0}.file-info h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--white)}
+.file-info p{font-size:11px;color:var(--grey);margin-top:1px}
+.badge{display:inline-block;background:rgba(163,230,53,.12);color:var(--lime);font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.3px}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.filter-btn{background:var(--card2);border:1px solid var(--navy3);color:var(--grey);padding:5px 12px;border-radius:5px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;transition:all .15s}
+.filter-btn.active,.filter-btn:hover{border-color:var(--lime);color:var(--lime);background:var(--limef)}
+.fin-num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px}
+.fin-green{color:#4ade80}.fin-red{color:#fca5a5}.fin-white{color:var(--white)}
+.code-block{background:#0D1117;border:1px solid var(--navy3);border-radius:8px;padding:16px;font-family:'Courier New',monospace;font-size:13px;color:#79C0FF;overflow-x:auto;margin:10px 0;position:relative;white-space:pre}
+.code-copy-btn{position:absolute;top:8px;right:8px;background:var(--navy3);border:none;color:var(--grey);padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;font-family:'Barlow',sans-serif}
+.code-copy-btn:hover{color:var(--lime)}
+.setup-step{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+.setup-num{background:var(--lime);color:var(--navy);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;flex-shrink:0;margin-top:2px}
+.setup-content h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:var(--white);margin-bottom:4px}
+.setup-content p{font-size:13px;color:var(--text);line-height:1.5}
+code{background:var(--navy3);padding:1px 5px;border-radius:3px;font-size:12px;font-family:'Courier New',monospace}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo" onclick="showTab('overview')">
+    <div class="logo-icon">JL</div>
+    <div class="logo-text">Jr Lions <span>Lacrosse</span></div>
+  </div>
+  <nav class="nav">
+    <button class="nav-btn active" onclick="showTab('overview')">Overview</button>
+    <button class="nav-btn" onclick="showTab('actions')">Action Steps</button>
+    <button class="nav-btn" onclick="showTab('businesses')">Businesses</button>
+    <button class="nav-btn" onclick="showTab('emails')">Email Templates</button>
+    <button class="nav-btn" onclick="showTab('marketing')">Marketing</button>
+    <button class="nav-btn" onclick="showTab('financial')">Financial</button>
+    <button class="nav-btn" onclick="showTab('github')">GitHub Setup</button>
+  </nav>
+  <div class="header-badge">Campaign HQ</div>
+</header>
+
+<div class="main">
+
+<!-- OVERVIEW -->
+<div id="tab-overview" class="tab-panel active">
+  <div class="section-title">Jr Lions Community <span>Savings Book</span></div>
+  <div class="section-sub">Campaign command center — strategy, contacts, emails, and tracking in one place</div>
+
+  <div class="card card-lime" style="margin-bottom:20px">
+    <div class="card-title"><span class="dot"></span>Timing Analysis — Is End of June Too Late to Launch?</div>
+    <div class="verdict-box">
+      <div class="verdict-label">Verdict</div>
+      <div class="verdict-main">Launch July 1st. Don't Wait.</div>
+      <div class="verdict-sub">End of June is not too late. Summer is actually the strongest season for every offer category in this book.</div>
+    </div>
+    <div class="row row-2">
+      <div>
+        <div class="callout amber">
+          <div class="callout-title">The concern (valid but manageable)</div>
+          <ul>
+            <li>The spring lacrosse season ends late May/early June — the captive "team parent" audience will scatter somewhat.</li>
+            <li>Launching at the close of a season risks feeling like an afterthought tied to a year that just closed.</li>
+          </ul>
+        </div>
+        <div class="callout green">
+          <div class="callout-title">Why summer works better than you think</div>
+          <ul>
+            <li>Golf is at absolute peak June–September. Your highest-value coupons are maximally relevant right now.</li>
+            <li>Families have more time — ice cream, mini golf, dining, and bowling all spike in summer.</li>
+            <li>Car washes spike in summer too. Every offer category aligns perfectly with the season.</li>
+            <li>This is a social-media-driven campaign, not player-selling. Your audience is the whole community, not just current team parents. It doesn't shrink when practice ends.</li>
+            <li>Digital book means no print-run risk. You can sell through September, October, and beyond without waste or cost.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="callout red">
+          <div class="callout-title">What NOT to do</div>
+          <ul>
+            <li>Don't brand it "support our spring season." Spring is over. Brand it "support Jr Lions year-round."</li>
+            <li>Don't wait for fall to get a "clean start." You'd forfeit 3 months of prime golf/summer selling time.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <div class="callout-title">Recommended path</div>
+          <ul>
+            <li><strong>Now–mid June:</strong> Secure business commitments and build digital assets.</li>
+            <li><strong>July 1:</strong> Hard launch. "Jr Lions Community Savings Book — Summer Edition."</li>
+            <li><strong>July–August:</strong> Active selling via social media and community channels.</li>
+            <li><strong>September:</strong> Second push as back-to-school energy hits. Reframe as "year-round savings."</li>
+            <li><strong>Book valid through June 30, 2027</strong> — every buyer gets a full year of value regardless of when they buy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-4" style="margin-bottom:20px">
+    <div class="kpi"><div class="kpi-label">Sell Price</div><div class="kpi-value">$30</div><div class="kpi-sub">per digital pass</div></div>
+    <div class="kpi"><div class="kpi-label">Savings Value</div><div class="kpi-value">$500+</div><div class="kpi-sub">estimated in-book value</div></div>
+    <div class="kpi"><div class="kpi-label">Base Target</div><div class="kpi-value">500</div><div class="kpi-sub">books → ~$13,170 net</div></div>
+    <div class="kpi"><div class="kpi-label">Launch Date</div><div class="kpi-value">Jul 1</div><div class="kpi-sub">6 weeks to prepare</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title"><span class="dot"></span>Campaign Files — Download All</div>
+    <div class="file-links">
+      <a class="file-link" href="files/Jr_Lions_Community_Savings_Book_Playbook.docx" download>
+        <div class="file-icon">📘</div>
+        <div class="file-info"><h4>Full Strategy Playbook</h4><p>Word doc — complete strategy reference</p></div>
+      </a>
+      <a class="file-link" href="files/Business_Outreach_Tracker.xlsx" download>
+        <div class="file-icon">📊</div>
+        <div class="file-info"><h4>Business Outreach Tracker</h4><p>Excel — 28 targets, status tracking, email log</p></div>
+      </a>
+      <a class="file-link" href="files/Campaign_Financial_Dashboard.xlsx" download>
+        <div class="file-icon">💰</div>
+        <div class="file-info"><h4>Financial Dashboard</h4><p>Excel — 4 scenarios, cost model, timeline</p></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="card card-lime">
+    <div class="card-title"><span class="dot"></span>The One-Sentence Pitch</div>
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:22px;color:var(--white);line-height:1.4;padding:8px 0">"It's $30, the first round of golf or two car washes pays for the whole thing, and every sale goes directly to Jr Lions Lacrosse."</p>
+  </div>
+</div>
+
+<!-- ACTION STEPS -->
+<div id="tab-actions" class="tab-panel">
+  <div class="section-title">Explicit <span>Action Steps</span></div>
+  <div class="section-sub">32 steps across 6 phases. Click any step to check it off. Progress saves in your browser.</div>
+  <div class="progress-wrap">
+    <div class="progress-label"><span>Overall Campaign Progress</span><span id="progress-pct">0 / 0 steps complete</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+  <div id="steps-container"></div>
+</div>
+
+<!-- BUSINESSES -->
+<div id="tab-businesses" class="tab-panel">
+  <div class="section-title">Partner <span>Target List</span></div>
+  <div class="section-sub">28 identified businesses — open the Outreach Tracker Excel to log status and emails</div>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterBiz(this,'all')">All (28)</button>
+    <button class="filter-btn" onclick="filterBiz(this,'golf')">⛳ Golf (7)</button>
+    <button class="filter-btn" onclick="filterBiz(this,'sim')">🏌️ Simulators (5)</button>
+    <button class="filter-btn" onclick="filterBiz(this,'rest')">🍗 Restaurants (6)</button>
+    <button class="filter-btn" onclick="filterBiz(this,'car')">🚗 Car Washes (4)</button>
+    <button class="filter-btn" onclick="filterBiz(this,'fam')">🎳 Family (6)</button>
+  </div>
+  <div class="tbl-wrap">
+    <table id="biz-table">
+      <thead><tr><th>Business</th><th>Category</th><th>Address</th><th>Phone</th><th>Contact</th><th>Suggested Offer</th><th>Priority</th></tr></thead>
+      <tbody id="biz-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- EMAILS -->
+<div id="tab-emails" class="tab-panel">
+  <div class="section-title">Email <span>Templates</span></div>
+  <div class="section-sub">10 templates ready to send. Copy with one click. Replace [bracketed] fields before sending.</div>
+  <div class="callout" style="margin-bottom:20px">
+    <div class="callout-title">Sending order</div>
+    <p>Send the 4 anchor personalized emails first (marked ⭐). Call each business 3–4 days after if no reply. Name-drop confirmed anchors in every subsequent email. Log all activity in the Outreach Tracker Excel.</p>
+  </div>
+  <div id="emails-container"></div>
+</div>
+
+<!-- MARKETING -->
+<div id="tab-marketing" class="tab-panel">
+  <div class="section-title">Marketing <span>Plan</span></div>
+  <div class="section-sub">Program-driven, social-first. No player selling required.</div>
+
+  <div class="row row-2" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Book Name Options</div>
+      <div style="background:var(--limef);border:1px solid var(--border);border-radius:6px;padding:12px 14px;margin-bottom:10px">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;color:var(--white);font-weight:700">⭐ Jr Lions Community Savings Book</div>
+        <div style="font-size:12px;color:var(--lime);margin-top:2px">Recommended</div>
+      </div>
+      <div style="font-size:13px;color:var(--text);line-height:2">Jr Lions Lacrosse Local Savings Pass<br>Hunterdon Jr Lions Savings Book<br>Play Local. Save Local. Jr Lions Lacrosse.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Taglines</div>
+      <div style="display:grid;gap:8px;font-size:13px">
+        <div style="color:var(--lime);font-style:italic;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)">"Local families. Local businesses. Local kids."</div>
+        <div style="font-style:italic;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)">"Over $500 in savings. One $30 pass. All local."</div>
+        <div style="font-style:italic;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)">"Save all year. Support your neighbors. Back the Lions."</div>
+        <div style="font-style:italic;padding:8px 0">"Buy once. Save all summer. Fund the kids."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title"><span class="dot"></span>Social Media Calendar (Weeks 1–12)</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Week</th><th>Type</th><th>Caption / Concept</th><th>Platform</th></tr></thead>
+        <tbody>
+          <tr><td>W1</td><td><span class="badge">Teaser</span></td><td>"Something big is coming for Jr Lions families and local businesses. Stay tuned 🦁"</td><td>IG, FB</td></tr>
+          <tr><td>W2</td><td><span class="badge">Partner Reveal</span></td><td>"Excited to announce [Business 1] is joining the Jr Lions Community Savings Book! Here's what they're offering..."</td><td>IG, FB</td></tr>
+          <tr><td>W3</td><td><span class="badge">Value Build</span></td><td>"What if $30 got you rounds of golf, free car washes, dinners, mini golf, and more? Coming July 1 — set your reminder."</td><td>IG, FB, Stories</td></tr>
+          <tr><td>W4</td><td><span class="badge">Partner Reveal</span></td><td>Feature simulator or restaurant anchor. Show the specific offer. Tag them.</td><td>IG, FB</td></tr>
+          <tr><td>W5</td><td><span class="badge">Countdown</span></td><td>"5 days until the Jr Lions Community Savings Book goes live. Here's a sneak peek at what's inside 👇"</td><td>IG, FB, Stories</td></tr>
+          <tr><td>W6</td><td><span class="badge">Pre-Launch</span></td><td>"Tomorrow. $30. $500+ in local savings. Link in bio at midnight. Who's grabbing one? 🦁"</td><td>ALL + Email</td></tr>
+          <tr><td style="color:var(--lime);font-weight:700">W7 🚀</td><td><span class="badge" style="background:rgba(163,230,53,.3)">LAUNCH</span></td><td>"IT'S LIVE 🦁 The Jr Lions Community Savings Book is here. [Link] $30 for 20+ local offers. 100% to Jr Lions Lacrosse."</td><td>ALL</td></tr>
+          <tr><td>W8</td><td><span class="badge">Social Proof</span></td><td>"Already [X] families have grabbed their savings book this week 🙌 Here's what's inside..."</td><td>IG, FB</td></tr>
+          <tr><td>W9</td><td><span class="badge">Savings Math</span></td><td>"One family already used their golf coupon and their car wash coupon. That's $75+ in savings on a $30 book. 🤯"</td><td>IG, FB, Stories</td></tr>
+          <tr><td>W10</td><td><span class="badge">Partner Spot</span></td><td>Ongoing partner spotlights 2x/week — rotate all businesses over the campaign window</td><td>IG, FB</td></tr>
+          <tr><td>W11</td><td><span class="badge">Urgency</span></td><td>"Valid through June 2027. But prices won't stay at $30 forever. Grab yours while it's available."</td><td>ALL</td></tr>
+          <tr><td>W12</td><td><span class="badge">Fall Push</span></td><td>"Fall lacrosse is back! So is the Jr Lions Savings Book. New partner: [X]. Link in bio 🦁"</td><td>ALL</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row row-2">
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Digital Distribution Setup</div>
+      <ul style="padding-left:16px;display:grid;gap:10px;font-size:13px;color:var(--text)">
+        <li><strong style="color:var(--white)">Payment:</strong> Gumroad (easiest) or Stripe — buyer pays $30, receives download link automatically. Zero manual work.</li>
+        <li><strong style="color:var(--white)">Delivery:</strong> PDF of the digital coupon book, OR a password-protected Google Drive folder with individual coupon cards.</li>
+        <li><strong style="color:var(--white)">QR codes:</strong> Each business gets a unique QR. Buyers show on their phone. Staff scans to validate. Free tool: qr-code-generator.com</li>
+        <li><strong style="color:var(--white)">Hub link:</strong> Create a Linktree or single landing page. Point all social bios here. Everything lives in one URL.</li>
+        <li><strong style="color:var(--white)">Email list:</strong> Collect buyer emails via Gumroad or a Google Form. Use free Mailchimp tier to send updates and partner spotlights.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Promotion (Program-Driven)</div>
+      <ul style="padding-left:16px;display:grid;gap:10px;font-size:13px;color:var(--text)">
+        <li><strong style="color:var(--white)">Partner reshares:</strong> Ask each confirmed business to share the launch post. Their followers are your target market. This is free and powerful.</li>
+        <li><strong style="color:var(--white)">Community groups:</strong> Post in Hunterdon County Facebook groups, Nextdoor, school parent groups. These convert well.</li>
+        <li><strong style="color:var(--white)">Paid ads:</strong> $50–$150 on Facebook/Instagram, target Hunterdon County, ages 25–55. The $30 price converts easily.</li>
+        <li><strong style="color:var(--white)">Local press:</strong> Email Hunterdon Democrat and TapInto Flemington. A short community pitch gets free coverage. Great for credibility.</li>
+        <li><strong style="color:var(--white)">Email:</strong> Every buyer gets a "share with a friend" message. Your best growth lever is word-of-mouth from happy buyers.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCIAL -->
+<div id="tab-financial" class="tab-panel">
+  <div class="section-title">Financial <span>Model</span></div>
+  <div class="section-sub">Digital-only economics — no printing, near-zero marginal cost per sale</div>
+
+  <div class="row row-4" style="margin-bottom:20px">
+    <div class="kpi"><div class="kpi-label">Conservative (100)</div><div class="kpi-value" style="font-size:28px">$2,660</div><div class="kpi-sub">net profit</div></div>
+    <div class="kpi"><div class="kpi-label">Base Case (500)</div><div class="kpi-value">$13,170</div><div class="kpi-sub">net profit</div></div>
+    <div class="kpi"><div class="kpi-label">Optimistic (750)</div><div class="kpi-value" style="font-size:28px">$19,870</div><div class="kpi-sub">net profit</div></div>
+    <div class="kpi"><div class="kpi-label">Stretch (1,000)</div><div class="kpi-value" style="font-size:24px">$28,140</div><div class="kpi-sub">net profit</div></div>
+  </div>
+
+  <div class="row row-2" style="margin-bottom:20px">
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Scenario Breakdown</div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Metric</th><th>100 books</th><th>500 books</th><th>1,000 books</th></tr></thead>
+        <tbody>
+          <tr><td>Gross Revenue</td><td class="fin-num fin-white">$3,000</td><td class="fin-num fin-white">$15,000</td><td class="fin-num fin-white">$30,000</td></tr>
+          <tr><td>Payment processing (~3.2%)</td><td class="fin-num fin-red">($96)</td><td class="fin-num fin-red">($480)</td><td class="fin-num fin-red">($960)</td></tr>
+          <tr><td>Platform, ads, misc</td><td class="fin-num fin-red">($244)</td><td class="fin-num fin-red">($350)</td><td class="fin-num fin-red">($900)</td></tr>
+          <tr><td style="font-weight:700;color:var(--white)">Net Profit</td><td class="fin-num fin-green" style="font-size:17px">$2,660</td><td class="fin-num fin-green" style="font-size:17px">$13,170</td><td class="fin-num fin-green" style="font-size:17px">$28,140</td></tr>
+          <tr><td>Profit per book</td><td class="fin-num fin-white">$26.60</td><td class="fin-num fin-white">$26.34</td><td class="fin-num fin-white">$28.14</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="dot"></span>Digital Cost Model</div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Cost Item</th><th>Per Book</th><th>Base (500)</th></tr></thead>
+        <tbody>
+          <tr><td>Payment processing (2.9% + $0.30)</td><td>$1.17</td><td>$583</td></tr>
+          <tr><td>Digital platform / hosting</td><td>$0</td><td>$0–$150</td></tr>
+          <tr><td>Design (Canva free)</td><td>$0</td><td>$0</td></tr>
+          <tr><td>Social media ads</td><td>$0.30</td><td>$150</td></tr>
+          <tr><td>Misc (QR tools, email platform)</td><td>$0.10</td><td>$50</td></tr>
+          <tr style="font-weight:700"><td style="color:var(--white)">Total</td><td style="color:var(--white)">~$1.57</td><td style="color:var(--white)">~$830</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout" style="margin-top:12px">
+        <p>Physical printing would have cost $2.50–$3/book with unsold-inventory risk. Digital removes both. Profit per book rises to $26+ with no cap and no waste.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Value Stack — Why $30 Is a No-Brainer</div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Category</th><th># of Offers</th><th>Perceived Value</th></tr></thead>
+      <tbody>
+        <tr><td>Free / BOGO golf rounds</td><td>2–4</td><td>$120–$260</td></tr>
+        <tr><td>Free simulator hours / package discounts</td><td>2–3</td><td>$90–$180</td></tr>
+        <tr><td>Restaurant offers (appetizers, family deals)</td><td>4–6</td><td>$60–$90</td></tr>
+        <tr><td>Free / BOGO car washes</td><td>2–4</td><td>$30–$70</td></tr>
+        <tr><td>Family entertainment + ice cream + sweets</td><td>5–7</td><td>$60–$110</td></tr>
+        <tr style="font-weight:700"><td style="color:var(--white)">Total</td><td style="color:var(--white)">15–24 offers</td><td class="fin-green fin-num" style="font-size:18px">$360–$710+</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- GITHUB SETUP -->
+<div id="tab-github" class="tab-panel">
+  <div class="section-title">GitHub Pages <span>Deployment</span></div>
+  <div class="section-sub">Host this dashboard live at yourname.github.io/jr-lions — free, permanent, shareable with your whole team</div>
+
+  <div class="callout green" style="margin-bottom:24px">
+    <div class="callout-title">What you get when done</div>
+    <p>A permanent URL you can share with co-directors, board members, and volunteers. This dashboard plus all downloadable files will live at one link forever. Updates you push to GitHub appear live in under a minute.</p>
+  </div>
+
+  <div class="row row-2">
+    <div>
+      <div class="setup-step"><div class="setup-num">1</div><div class="setup-content">
+        <h4>Install Git</h4>
+        <p>Mac: open Terminal, run <code>xcode-select --install</code>. Windows: download from git-scm.com and install with defaults.</p>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">2</div><div class="setup-content">
+        <h4>Create a free GitHub account</h4>
+        <p>Go to github.com → Sign up → Free plan. Your username becomes part of the site URL.</p>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">3</div><div class="setup-content">
+        <h4>Create a new repository</h4>
+        <p>On GitHub → green "New" button → Name: <code>jr-lions-savings-book</code> → Set to Public → click "Create repository."</p>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">4</div><div class="setup-content">
+        <h4>Build your local folder</h4>
+        <p>Create a folder on your computer with this exact structure:</p>
+        <div class="code-block">jr-lions-savings-book/
+├── index.html          ← this dashboard
+├── README.md
+└── files/
+    ├── Jr_Lions_Community_Savings_Book_Playbook.docx
+    ├── Business_Outreach_Tracker.xlsx
+    └── Campaign_Financial_Dashboard.xlsx</div>
+      </div></div>
+    </div>
+    <div>
+      <div class="setup-step"><div class="setup-num">5</div><div class="setup-content">
+        <h4>Push files to GitHub</h4>
+        <p>Open Terminal in your folder and run these commands one at a time:</p>
+        <div class="code-block" id="push-code">git init
+git add .
+git commit -m "Initial commit — Jr Lions HQ"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/jr-lions-savings-book.git
+git push -u origin main<button class="code-copy-btn" onclick="copyBlock('push-code',this)">Copy</button></div>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">6</div><div class="setup-content">
+        <h4>Enable GitHub Pages</h4>
+        <p>On GitHub → your repo → Settings tab → Pages (left sidebar) → Source: "Deploy from a branch" → Branch: main → Folder: / (root) → Save.</p>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">7</div><div class="setup-content">
+        <h4>Your live URL</h4>
+        <div class="code-block">https://YOUR_USERNAME.github.io/jr-lions-savings-book/</div>
+        <p style="margin-top:8px">Goes live in 1–3 minutes. Bookmark it and share with your team.</p>
+      </div></div>
+      <div class="setup-step"><div class="setup-num">8</div><div class="setup-content">
+        <h4>Pushing future updates</h4>
+        <p>Whenever you update any file, save it in the folder and run:</p>
+        <div class="code-block" id="update-code">git add .
+git commit -m "Update [describe what changed]"
+git push<button class="code-copy-btn" onclick="copyBlock('update-code',this)">Copy</button></div>
+        <p style="margin-top:6px">Live within 30 seconds of pushing.</p>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  ['overview','actions','businesses','emails','marketing','financial','github'].forEach((t,i)=>{
+    if(t===id) document.querySelectorAll('.nav-btn')[i].classList.add('active');
+  });
+  window.scrollTo(0,0);
+}
+
+function copyEmail(btn){
+  const body=btn.closest('.email-block').querySelector('.email-body').textContent;
+  navigator.clipboard.writeText(body).then(()=>{
+    btn.textContent='COPIED ✓';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='COPY';btn.classList.remove('copied');},2000);
+  });
+}
+
+function copyBlock(id,btn){
+  const el=document.getElementById(id);
+  const text=el.textContent.replace(/Copy$/,'').trim();
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy',2000);
+  });
+}
+
+const bizData=[
+  {c:'golf',n:'Heron Glen Golf Course',a:'Heron Glen Dr, Ringoes, NJ 08551',ph:'908-806-6804',ct:'Pro Shop / GM',o:'Free weekday twilight 18-hole round or BOGO green fees',p:'high'},
+  {c:'golf',n:'High Bridge Hills Golf Club',a:'203 Cregar Rd, High Bridge, NJ 08829',ph:'908-638-5055',ct:'GM',o:'Weekday twilight round or free large range bucket',p:'high'},
+  {c:'golf',n:'Neshanic Valley Golf Course',a:'2301 S Branch Rd, Neshanic Station',ph:'908-369-8200',ct:'GM / County Contact',o:'BOGO weekday round or Academy 9-hole pass',p:'high'},
+  {c:'golf',n:'Harkers Hollow Golf Club',a:'950 Uniontown Rd, Phillipsburg, NJ 08865',ph:'908-454-1884',ct:'GM / Owner',o:'Twilight round + $10 food credit',p:'med'},
+  {c:'golf',n:'Beaver Brook Country Club',a:'25 Country Club Dr, Annandale, NJ 08801',ph:'908-735-4200',ct:'GM',o:'Weekday round + clubhouse credit',p:'med'},
+  {c:'golf',n:'Fox Hollow Golf Club',a:'59 Fox Chase Run, Branchburg, NJ 08876',ph:'908-526-0010',ct:'GM / Pro Shop',o:'Weekday round or BOGO',p:'med'},
+  {c:'golf',n:'Paradise Golf Driving Range',a:'56 NJ-12, Flemington, NJ 08822',ph:'908-788-3786',ct:'Owner (Rob)',o:'Free large range bucket + mini golf round',p:'low'},
+  {c:'sim',n:'GolfCave',a:'176 US-202, Ringoes, NJ 08551',ph:'908-615-2283',ct:'Matt (Manager)',o:'1 free weekday daytime bay hour',p:'high'},
+  {c:'sim',n:'Tee Box Golf House',a:'137 Mountain View Rd, Hillsborough, NJ 08844',ph:'908-292-0992',ct:'Owner (Travis)',o:'Buy 1 hr get 1 hr off-peak or 20% off package',p:'high'},
+  {c:'sim',n:'The Back Nine Golf',a:'301 N Harrison St, Princeton, NJ 08540',ph:'609-380-9997',ct:'GM',o:'1 free bay hour (leverages 24hr open model)',p:'med'},
+  {c:'sim',n:"Birds Nest / Golf at the Nest",a:'415 York Rd #6, New Hope, PA 18938',ph:'267-740-7913',ct:'GM / Owner',o:'Discounted bay hour + free appetizer bundle',p:'med'},
+  {c:'sim',n:'The Bunker',a:'500 Schooleys Mountain Rd, Hackettstown, NJ 07840',ph:'908-979-0366',ct:'Owner',o:'Discounted bay session',p:'low'},
+  {c:'rest',n:'Buffalo Wild Wings (Flemington)',a:'144 NJ-31 Suite 100, Flemington',ph:'908-483-2300',ct:'General Manager',o:'Free appetizer with entree OR kids eat free',p:'high'},
+  {c:'rest',n:"Frank's Pizza & Italian",a:'67 Walmart Plz, Clinton, NJ 08809',ph:'908-735-9293',ct:'Owner / Manager',o:'Family meal deal or free appetizer',p:'med'},
+  {c:'rest',n:'SV Pizzeria',a:'20 Leigh St, Clinton, NJ 08809',ph:'908-200-7407',ct:'Owner (Richard)',o:'Free gelato or appetizer with pizza',p:'med'},
+  {c:'rest',n:'Toscana Thin Crust Pizza',a:'5 Main St, Clinton, NJ 08809',ph:'908-323-2215',ct:'Owner',o:'BOGO slice or family pizza deal',p:'med'},
+  {c:'rest',n:"Rosemarie's Cucina",a:'10 E Main St, Clinton, NJ 08809',ph:'908-323-2380',ct:'Chef Paul / Marie',o:'Free dessert with 2 entrees',p:'low'},
+  {c:'rest',n:'The River Mill View',a:'41 Main St, Clinton, NJ 08809',ph:'908-335-8435',ct:'GM',o:'% off lunch or free appetizer',p:'low'},
+  {c:'car',n:'Shammy Shine — Clinton Center St',a:'185 Center St, Clinton, NJ 08809',ph:'908-730-8847',ct:'Manager / Owner',o:'1 free basic exterior wash',p:'high'},
+  {c:'car',n:'Clinton II Shammy Shine',a:'86 W Main St, Clinton, NJ 08809',ph:'908-735-8122',ct:'Manager',o:'Same offer — same ownership group',p:'high'},
+  {c:'car',n:'Shammy Shine — Flemington Rt 12',a:'34 NJ-12, Flemington, NJ 08822',ph:'908-782-3321',ct:'Manager',o:'Free basic wash or BOGO',p:'high'},
+  {c:'car',n:'Shammy Shine — Raritan Full Service',a:'131 NJ-31, Flemington, NJ 08822',ph:'908-788-7676',ct:'Manager / Owner',o:'$15 off full detail package',p:'med'},
+  {c:'fam',n:'Pine Creek Miniature Golf',a:'394 NJ-31 N, Ringoes, NJ 08551',ph:'609-466-3803',ct:'Owner (Missy)',o:'BOGO round of mini golf',p:'high'},
+  {c:'fam',n:'Break Away Entertainment',a:'17 Minneakoning Rd, Flemington, NJ 08822',ph:'908-968-3886',ct:'Owner / Manager',o:'1 free hour of billiards or arcade',p:'med'},
+  {c:'fam',n:'Thee Ice Cream Parlor',a:'463 US-202, Flemington, NJ 08822',ph:'908-284-1233',ct:'Owner',o:'BOGO ice cream cone',p:'high'},
+  {c:'fam',n:'Humdoo Ice Cream Shop',a:'20 Stangl Rd, Flemington, NJ 08822',ph:'908-824-7275',ct:'Owner',o:'BOGO scoop or free topping',p:'high'},
+  {c:'fam',n:'The Fudge Shoppe',a:'461 US-202, Flemington, NJ 08822',ph:'908-782-7123',ct:'Owner',o:'10% off any purchase',p:'med'},
+  {c:'fam',n:'Oakwood Lanes',a:'234 NJ-31, Washington, NJ 07882',ph:'908-689-0310',ct:'Manager',o:'1 free game or free shoe rental',p:'med'},
+];
+const catMap={golf:{l:'Golf',cls:'tg'},sim:{l:'Simulator',cls:'ts'},rest:{l:'Restaurant',cls:'tr'},car:{l:'Car Wash',cls:'tc'},fam:{l:'Family',cls:'tf'}};
+const priMap={high:'🔴 Anchor',med:'🟡 Standard',low:'🟢 Rounding'};
+
+function renderBiz(f='all'){
+  const tb=document.getElementById('biz-body');tb.innerHTML='';
+  bizData.filter(b=>f==='all'||b.c===f).forEach(b=>{
+    const m=catMap[b.c];
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td><strong style="color:var(--white)">${b.n}</strong></td><td><span class="tag ${m.cls}">${m.l}</span></td><td style="font-size:12px;color:var(--grey)">${b.a}</td><td><a href="tel:${b.ph}" style="color:var(--lime2);text-decoration:none">${b.ph}</a></td><td style="font-size:12px">${b.ct}</td><td style="font-size:12px;color:var(--lime)">${b.o}</td><td style="font-size:12px;white-space:nowrap">${priMap[b.p]}</td>`;
+    tb.appendChild(tr);
+  });
+}
+renderBiz();
+function filterBiz(btn,f){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBiz(f);}
+
+const emailData=[
+  {name:"Anchor Outreach — Golf Courses",cat:"Golf",subj:"A community partnership for [Course Name] and Jr Lions Lacrosse",body:`Hi [Contact Name],
+
+My name is [Your Name], and I help run Jr Lions Lacrosse, the youth lacrosse program here in Hunterdon County. I'm reaching out about a partnership I think [Course Name] would genuinely benefit from.
+
+We're putting together the Jr Lions Community Savings Book — a digital local savings pass that families across the area purchase to save money at businesses they already love. Golf is the headline category, and we'd love [Course Name] to be one of our featured partners.
+
+A great offer is something that costs the course very little but carries a lot of value to the buyer — a weekday twilight round, a BOGO green fee, or a free range bucket. These fill tee times that might otherwise go empty, and they bring new golfers to your course who tend to come back at full price.
+
+You set every term — weekday-only windows, blackout dates, cart conditions, expiration — and there's no cost to participate. We feature every partner across our social media and community channels.
+
+Could I call you for five minutes this week? Reach me at [Phone] or reply here.
+
+Thank you,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"Indoor Golf Simulators",cat:"Simulator",subj:"Reaching local golf families for [Business Name] this season",body:`Hi [Contact Name],
+
+My name is [Your Name] with Jr Lions Lacrosse in Hunterdon County. [Business Name] is a natural fit for a community program we're launching.
+
+We're creating the Jr Lions Community Savings Book — a digital savings pass that local families purchase to save at area businesses, with proceeds supporting youth lacrosse. Indoor golf stays valuable through fall and winter when every other offer goes quiet, making it one of the best categories in the book.
+
+We'd love to feature [Business Name] with an offer like a free weekday daytime bay hour, a buy-one-get-one on off-peak time, or a membership/package discount. Idle hours that would otherwise go empty become a near-zero-cost trial that converts coupon holders into members.
+
+No cost to participate, you control all the terms, and we promote every partner across our community channels.
+
+Could I grab five minutes by phone this week? Reach me at [Phone] or reply here.
+
+Thanks,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"Restaurants",cat:"Restaurant",subj:"Bringing local families through your door — Jr Lions Lacrosse",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse, the youth lacrosse program in Hunterdon County. I have a community partnership in mind that I think [Restaurant Name] would do well with.
+
+We're producing the Jr Lions Community Savings Book — a digital savings pass local families buy, with proceeds funding our youth program. Dining is one of the most-used categories, which means real, repeat foot traffic.
+
+A great offer: free appetizer with an entree, kids eat free, a free dessert with two entrees, or a family meal deal with a minimum spend. These pull whole families in and most of the table orders at full price.
+
+You decide the offer and conditions. No cost to participate, and we feature every partner across our community channels.
+
+Could we connect by phone for a few minutes? Reach me at [Phone] or reply here.
+
+Thank you,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"Car Washes",cat:"Car Wash",subj:"A simple way for [Business Name] to win new local customers",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse in Hunterdon County. A car wash is a perfect fit for the community program we're launching.
+
+We're producing the Jr Lions Community Savings Book — a digital savings pass local families buy to save at area businesses, with proceeds supporting youth lacrosse. A car wash offer is one of the most used in any pass, because every household needs it.
+
+A free basic wash or BOGO wash costs very little to honor but is a strong hook toward converting a coupon holder into a regular or monthly member. You could also feature a discount on a detail package to drive a higher-ticket visit.
+
+No cost to participate, you set all terms and expiration, and we promote every partner across our channels. If you have multiple locations, we can feature the offer at all of them.
+
+Could I call you for five minutes? Reach me at [Phone] or reply here.
+
+Thanks,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"Family Entertainment & Ice Cream",cat:"Family",subj:"Featuring [Business Name] in the Jr Lions Community Savings Book",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse, the youth lacrosse program in Hunterdon County. I'm reaching out about a partnership I think families would love to see [Business Name] in.
+
+We're creating the Jr Lions Community Savings Book — a digital savings pass that local households buy to save at area businesses, with all proceeds funding our youth program. We want the pass to feel useful to every family, which is exactly why [Business Name] is a perfect fit.
+
+A simple offer works best: BOGO cone or game round, free hour of play, free topping, or a small % off a purchase. These cost very little, bring families in, and almost always lead to additional full-price spending.
+
+No cost to participate, you set the terms, and we promote every partner across our channels.
+
+Could we connect for a quick call? Reach me at [Phone] or reply here.
+
+Thank you,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"⭐ Personalized — Heron Glen Golf Course",cat:"Anchor",subj:"Heron Glen + Jr Lions Lacrosse: a county community partnership",body:`Hi [Contact Name],
+
+My name is [Your Name], and I help run Jr Lions Lacrosse, the youth lacrosse program in Hunterdon County. As a county course that families across the area already know and love, Heron Glen would be the perfect headline partner for the campaign we're launching.
+
+We're producing the Jr Lions Community Savings Book — a digital savings pass local families purchase, with all proceeds supporting Jr Lions Lacrosse. Golf is the lead category, and Heron Glen on the featured tier would define the value of the whole pass.
+
+We'd suggest a weekday twilight round with cart, or a BOGO weekday green fee — filling tee times that might otherwise sit empty. You set every term: weekday-only windows, blackout dates, and expiration are entirely your call. No cost to participate, and we'll feature Heron Glen prominently across all our community channels.
+
+Given that Heron Glen is a county facility supporting county kids, this partnership tells a great story locally. Could I call you for five minutes? Reach me at [Phone] or reply here.
+
+Thank you for everything you do for golfers in this county,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"⭐ Personalized — GolfCave (Ringoes)",cat:"Anchor",subj:"Turning local golf families into GolfCave members this season",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse in Hunterdon County. GolfCave is right in our backyard, and I think there's a partnership here that lines up well with your membership model.
+
+We're launching the Jr Lions Community Savings Book — a digital savings pass that local families buy, with proceeds funding Jr Lions Lacrosse. Indoor golf is a category we're especially excited about, and GolfCave would be the anchor for it.
+
+A free weekday daytime bay hour, or a discount on a membership or package, costs you very little during off-peak hours but puts a warm, qualified prospect in one of your bays. For a membership-driven business, every coupon visit is a free trial that can convert.
+
+No cost to participate, you control all the terms, and we feature GolfCave across our community channels and directly to our families. Could I grab five minutes by phone? Reach me at [Phone] or reply here.
+
+Thanks,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"⭐ Personalized — Buffalo Wild Wings Flemington",cat:"Anchor",subj:"A local sports partnership for Buffalo Wild Wings Flemington",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse here in Hunterdon County, and I'd love to connect with the General Manager about a community partnership.
+
+We're producing the Jr Lions Community Savings Book — a digital savings pass local families buy, with proceeds supporting youth lacrosse. As the go-to sports spot in Flemington, Buffalo Wild Wings is a natural fit. There's a genuinely good story in a local sports team partnering with a local sports bar.
+
+A free appetizer with an entree, or a kids-eat-free offer, costs very little but brings whole families in — often on game days — with most of the table ordering at full price. Reliable, repeat traffic, and visible support for local kids.
+
+No cost to participate, you set the terms and expiration, and we promote every partner across our community channels. If franchise or corporate approval is needed, I'm happy to support that process.
+
+Could I call the restaurant to set up five minutes with the GM? Reach me at [Phone] or reply here.
+
+Thank you,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"⭐ Personalized — Shammy Shine (Multi-Location)",cat:"Anchor",subj:"One partnership, every Shammy Shine location — Jr Lions Lacrosse",body:`Hi [Contact Name],
+
+I'm [Your Name] with Jr Lions Lacrosse in Hunterdon County. Because Shammy Shine has multiple locations across Clinton and Flemington, I wanted to reach you directly about a partnership that could cover all of them at once.
+
+We're launching the Jr Lions Community Savings Book — a digital savings pass local families buy to save at area businesses, with proceeds funding Jr Lions Lacrosse. A car wash offer is among the most-used coupons in any savings pass, since every family needs it.
+
+A free basic wash or BOGO wash costs little to honor but is a strong first step toward a monthly membership. We can feature one offer redeemable at every Shammy Shine location — broad community exposure from a single conversation.
+
+No cost to participate, you set all terms and expiration, and we promote every partner across our community channels. Could we connect by phone for a few minutes? Reach me at [Phone] or reply here.
+
+Thanks,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+  {name:"Follow-Up (No Reply After 7 Days)",cat:"Follow-Up",subj:"Quick follow-up: [Business Name] + Jr Lions Community Savings Book",body:`Hi [Contact Name],
+
+Just floating my note back to the top of your inbox — I know how busy things get.
+
+We're still finalizing partners for the Jr Lions Community Savings Book and would love to include [Business Name]. It takes just a five-minute call, there's no cost to participate, and you control the offer entirely.
+
+If now isn't the right time, just let me know and I'll check back later. Otherwise, I'm easy to reach at [Phone].
+
+Thanks again,
+[Your Name]
+Jr Lions Lacrosse | [Phone] | [Email]`},
+];
+
+function renderEmails(){
+  const c=document.getElementById('emails-container');
+  emailData.forEach(e=>{
+    const d=document.createElement('div');d.className='email-block';
+    d.innerHTML=`<div class="email-header"><div><div class="email-name">${e.name}</div><div class="email-subject">Subject: ${e.subj}</div></div><div class="email-meta"><span class="email-cat">${e.cat}</span><button class="copy-btn" onclick="copyEmail(this)">COPY</button></div></div><div class="email-body">${e.body}</div>`;
+    c.appendChild(d);
+  });
+}
+renderEmails();
+
+const stepsData=[
+  {phase:"PHASE 1: SETUP",dates:"Week 1 — May 21–26",items:[
+    {id:'s01',t:"Decide final book name",d:"Recommended: 'Jr Lions Community Savings Book'. Confirm with board or co-directors.",p:'high'},
+    {id:'s02',t:"Set up payment collection",d:"Create Gumroad or Stripe account. Set product at $30. Test a $1 purchase end-to-end.",p:'high'},
+    {id:'s03',t:"Open the Business Outreach Tracker",d:"Download the Excel from the Overview tab. This is your command center for all partner outreach.",p:'high'},
+    {id:'s04',t:"Confirm social media accounts exist",d:"Verify Instagram and Facebook pages for Jr Lions Lacrosse are live. If not, create them now.",p:'high'},
+    {id:'s05',t:"Set up Canva (free)",d:"You'll design digital coupon cards here. Free tier is sufficient. canva.com",p:'med'},
+    {id:'s06',t:"Set and announce campaign goal internally",d:"Goal: 500 books, ~$13,170 net. Announce to board/directors to create accountability.",p:'med'},
+  ]},
+  {phase:"PHASE 2: ANCHOR OUTREACH",dates:"Week 2 — May 27–Jun 1",items:[
+    {id:'s07',t:"Send ⭐ Heron Glen email",d:"Personalized template in Email Templates tab. Call 908-806-6804 on Day 3–4 if no reply.",p:'high'},
+    {id:'s08',t:"Send ⭐ GolfCave email",d:"Personalized template. Call 908-615-2283 on Day 3–4 if no reply.",p:'high'},
+    {id:'s09',t:"Send ⭐ Buffalo Wild Wings email",d:"Personalized template. Ask for the General Manager. Call 908-483-2300.",p:'high'},
+    {id:'s10',t:"Contact Shammy Shine management",d:"Best: call 908-788-7676 and ask for the owner or regional manager. One call = all 4 locations.",p:'high'},
+    {id:'s11',t:"Log every action in the Outreach Tracker",d:"Date sent, contact name, email used, follow-up date (4 days out) in each row.",p:'high'},
+  ]},
+  {phase:"PHASE 3: BROAD OUTREACH",dates:"Week 3 — Jun 2–8",items:[
+    {id:'s12',t:"Email all remaining golf courses",d:"High Bridge Hills, Neshanic Valley, Harkers Hollow, Beaver Brook, Fox Hollow, Paradise Range.",p:'high'},
+    {id:'s13',t:"Email all remaining simulators",d:"Tee Box Golf House, The Back Nine, Birds Nest, The Bunker.",p:'med'},
+    {id:'s14',t:"Email all restaurants",d:"Frank's Pizza, SV Pizzeria, Toscana, Rosemarie's, River Mill View.",p:'med'},
+    {id:'s15',t:"Email all family businesses",d:"Pine Creek Mini Golf, Break Away, Thee Ice Cream, Humdoo, Fudge Shoppe, Oakwood Lanes.",p:'med'},
+    {id:'s16',t:"Follow up all Week 2 contacts with no reply",d:"Send the Follow-Up email to anyone contacted 7+ days ago with no response.",p:'high'},
+  ]},
+  {phase:"PHASE 4: CONFIRM PARTNERS",dates:"Weeks 4–5 — Jun 9–22",items:[
+    {id:'s17',t:"Convert all Verbal Yes to written confirmation",d:"Email each: 'Just confirming — the offer will be [X], valid [dates], restrictions [Y]. Correct?' Screenshot/save replies.",p:'high'},
+    {id:'s18',t:"Collect exact offer language from each partner",d:"Need precise text for coupon card: what they get, when, restrictions, expiry date.",p:'high'},
+    {id:'s19',t:"Log all confirmed offers in Confirmed Partners tab",d:"This is the master source of truth for coupon card design.",p:'high'},
+    {id:'s20',t:"Set redemption method with each partner",d:"Options: (a) show QR on phone, (b) show a code, (c) visual check. Simpler = higher redemption.",p:'med'},
+  ]},
+  {phase:"PHASE 5: BUILD DIGITAL ASSETS",dates:"Week 6 — Jun 23–29",items:[
+    {id:'s21',t:"Design digital coupon cards in Canva",d:"One card per partner: business name, logo, offer text, restrictions, expiry, Jr Lions branding. Export as PNG or PDF.",p:'high'},
+    {id:'s22',t:"Compile all cards into one PDF document",d:"Cover page + all coupon cards. This is the 'Jr Lions Community Savings Book' buyers receive.",p:'high'},
+    {id:'s23',t:"Set up delivery mechanism",d:"Gumroad: handles payment + PDF delivery automatically. Or: Google Drive link in Stripe confirmation email.",p:'high'},
+    {id:'s24',t:"Create QR codes for each partner",d:"qr-code-generator.com. Each QR on the coupon links to the business location or a validation page.",p:'med'},
+    {id:'s25',t:"Write and schedule first 3 social posts",d:"Teaser now, Partner Reveal, and the LAUNCH POST for July 1. Use Marketing tab content calendar.",p:'high'},
+    {id:'s26',t:"Preview email to community list",d:"Subject: 'Something big is coming July 1 from Jr Lions.' One paragraph, build anticipation.",p:'med'},
+  ]},
+  {phase:"PHASE 6: LAUNCH & PROMOTE",dates:"Week 7+ — Jul 1 and ongoing",items:[
+    {id:'s27',t:"LAUNCH: Post everywhere on July 1",d:"Instagram, Facebook, Nextdoor, Hunterdon County Facebook groups, school parent groups simultaneously.",p:'high'},
+    {id:'s28',t:"Ask every confirmed partner to share the launch post",d:"Text/email each: 'We just went live! If you can share our post it means everything.' Most will.",p:'high'},
+    {id:'s29',t:"Post partner spotlights 2x per week",d:"One post per business, tag them. Rotate all partners over 4–6 weeks. Their reshares = free reach.",p:'high'},
+    {id:'s30',t:"Submit press release to Hunterdon Democrat and TapInto",d:"3-paragraph community story: program name, how it works, community value, your quote. Email both.",p:'med'},
+    {id:'s31',t:"Run $50–$150 targeted Facebook/Instagram ad",d:"Target: Hunterdon County, ages 25–55, interests: family, golf, local. Objective: link clicks to buy page.",p:'med'},
+    {id:'s32',t:"September re-push as fall season begins",d:"New social batch, partner spotlights, and back-to-school angle. Many summer non-buyers will buy now.",p:'med'},
+  ]},
+];
+
+function renderSteps(){
+  const c=document.getElementById('steps-container');
+  const saved=JSON.parse(localStorage.getItem('jl-steps')||'{}');
+  stepsData.forEach(ph=>{
+    const pd=document.createElement('div');pd.className='steps-phase';
+    const phKey=ph.phase.replace(/\W/g,'_');
+    pd.innerHTML=`<div class="phase-header"><span class="phase-label">${ph.phase}</span><span class="phase-dates">${ph.dates}</span></div><div class="phase-steps" id="ps-${phKey}"></div>`;
+    c.appendChild(pd);
+    const sd=pd.querySelector('.phase-steps');
+    ph.items.forEach(s=>{
+      const done=saved[s.id];
+      const el=document.createElement('div');
+      el.className='step-item'+(done?' done-item':'');el.setAttribute('data-id',s.id);
+      el.innerHTML=`<div class="step-check${done?' done':''}" id="chk-${s.id}"></div><div class="step-text"><div class="step-title">${s.t}</div><div class="step-desc">${s.d}</div></div><span class="step-priority p-${s.p}">${s.p}</span>`;
+      el.onclick=()=>toggleStep(s.id);
+      sd.appendChild(el);
+    });
+  });
+  updateProgress();
+}
+
+function toggleStep(id){
+  const saved=JSON.parse(localStorage.getItem('jl-steps')||'{}');
+  saved[id]=!saved[id];
+  localStorage.setItem('jl-steps',JSON.stringify(saved));
+  const el=document.querySelector(`[data-id="${id}"]`);
+  const chk=document.getElementById(`chk-${id}`);
+  if(saved[id]){el.classList.add('done-item');chk.classList.add('done');}
+  else{el.classList.remove('done-item');chk.classList.remove('done');}
+  updateProgress();
+}
+
+function updateProgress(){
+  const saved=JSON.parse(localStorage.getItem('jl-steps')||'{}');
+  const total=stepsData.reduce((a,p)=>a+p.items.length,0);
+  const done=Object.values(saved).filter(Boolean).length;
+  document.getElementById('progress-pct').textContent=`${done} / ${total} steps complete`;
+  document.getElementById('progress-fill').style.width=(total?Math.round(done/total*100):0)+'%';
+}
+
+renderSteps();
+</script>
+</body>
+</html>
